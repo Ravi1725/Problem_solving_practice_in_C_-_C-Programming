@@ -1,3 +1,5 @@
+//program to calculate the sum of all sub-matrix of the provided matrix in O(n2).
+//Main concept is that an indiviual cell comes in how many number of sub_matrix.On this, It is calculated P&C is used. 
 #include<iostream>
 #include<algorithm>
 #include<cstring>
@@ -9,8 +11,8 @@ int sum_sub_matrix(int **arr,int n,int m)
 	{
 		for(int j=0;j<m;j++)
 		{
-			int x=(i+1)*(j+1);
-			int y=(n-i)*(m-j);
+			int x=(i+1)*(j+1);//Area of rectangle of top_left matrix
+			int y=(n-i)*(m-j);//Area of rectangle of bottom_right matrix
 			sum+=arr[i][j]*x*y;
 		}
 	}
